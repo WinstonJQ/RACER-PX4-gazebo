@@ -1,0 +1,38 @@
+# ROS/catkin build directories
+build/
+devel/
+install/
+log/
+
+# Catkin tools
+.catkin_tools/
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Bag files (usually large)
+*.bag
+
+# Documentation build
+docs/_build/
+
+# Model weights/checkpoints (large files)
+*.pth
+*.pt
+*.ckpt
+*.weights
+
+# Log files
+*.log
