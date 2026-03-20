@@ -6,7 +6,7 @@ run_in_new_tab() {
 }
 
 # 由于PX4启动较慢，优先启动并延长等待时间
-run_in_new_tab "PX4仿真" "roslaunch px4 indoor31.launch"
+run_in_new_tab "PX4仿真" "roslaunch racer_bringup indoor31.launch"
 echo "等待PX4启动..."
 sleep 10  # 重要！PX4启动需要足够时间，可根据实际情况调整
 

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>racer_bringup</name>
+  <version>1.0.0</version>
+  <description>Launch files and world files for RACER PX4 Gazebo multi-drone exploration</description>
+  <maintainer email="1451850927@qq.com">WinstonJQ</maintainer>
+  <license>MIT</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>mavros</exec_depend>
+  <exec_depend>px4</exec_depend>
+</package>
