@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- iris_0 -->
+    <node pkg="px4ctrl" type="px4ctrl_node" name="iris_0_px4ctrl" output="screen">
+        <remap from="mavros/state"               to="/iris_0/mavros/state" />
+        <remap from="mavros/extended_state"      to="/iris_0/mavros/extended_state" />
+        <remap from="mavros/imu/data"            to="/iris_0/mavros/imu/data" />
+        <remap from="mavros/rc/in"               to="/iris_0/mavros/rc/in" />
+        <remap from="mavros/battery"             to="/iris_0/mavros/battery" />
+        <remap from="mavros/setpoint_raw/attitude" to="/iris_0/mavros/setpoint_raw/attitude" />
+        <remap from="mavros/set_mode"            to="/iris_0/mavros/set_mode" />
+        <remap from="mavros/cmd/arming"          to="/iris_0/mavros/cmd/arming" />
+        <remap from="mavros/cmd/command"         to="/iris_0/mavros/cmd/command" />
+        <remap from="~odom"                      to="/iris_0/ground_truth/odom" />
+        <remap from="~cmd"                       to="/planning/pos_cmd_1" />
+        <remap from="~takeoff_land"              to="/iris_0/takeoff_land" />
+        <remap from="traj_start_trigger"         to="/iris_0/traj_start_trigger" />
+        <remap from="debugPx4ctrl"               to="/iris_0/debugPx4ctrl" />
+        <remap from="px4ctrl_mode"               to="/iris_0/px4ctrl_mode" />
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+    </node>
+    <node pkg="px4ctrl" type="increase_frequency.sh" name="iris_0_increase_frequency" output="screen">
+        <env name="DRONE_ID" value="0" />
+    </node>
+
+    <!-- iris_1 -->
+    <node pkg="px4ctrl" type="px4ctrl_node" name="iris_1_px4ctrl" output="screen">
+        <remap from="mavros/state"               to="/iris_1/mavros/state" />
+        <remap from="mavros/extended_state"      to="/iris_1/mavros/extended_state" />
+        <remap from="mavros/imu/data"            to="/iris_1/mavros/imu/data" />
+        <remap from="mavros/rc/in"               to="/iris_1/mavros/rc/in" />
+        <remap from="mavros/battery"             to="/iris_1/mavros/battery" />
+        <remap from="mavros/setpoint_raw/attitude" to="/iris_1/mavros/setpoint_raw/attitude" />
+        <remap from="mavros/set_mode"            to="/iris_1/mavros/set_mode" />
+        <remap from="mavros/cmd/arming"          to="/iris_1/mavros/cmd/arming" />
+        <remap from="mavros/cmd/command"         to="/iris_1/mavros/cmd/command" />
+        <remap from="~odom"                      to="/iris_1/ground_truth/odom" />
+        <remap from="~cmd"                       to="/planning/pos_cmd_2" />
+        <remap from="~takeoff_land"              to="/iris_1/takeoff_land" />
+        <remap from="traj_start_trigger"         to="/iris_1/traj_start_trigger" />
+        <remap from="debugPx4ctrl"               to="/iris_1/debugPx4ctrl" />
+        <remap from="px4ctrl_mode"               to="/iris_1/px4ctrl_mode" />
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+    </node>
+    <node pkg="px4ctrl" type="increase_frequency.sh" name="iris_1_increase_frequency" output="screen">
+        <env name="DRONE_ID" value="1" />
+    </node>
+
+    <!-- iris_2 -->
+    <node pkg="px4ctrl" type="px4ctrl_node" name="iris_2_px4ctrl" output="screen">
+        <remap from="mavros/state"               to="/iris_2/mavros/state" />
+        <remap from="mavros/extended_state"      to="/iris_2/mavros/extended_state" />
+        <remap from="mavros/imu/data"            to="/iris_2/mavros/imu/data" />
+        <remap from="mavros/rc/in"               to="/iris_2/mavros/rc/in" />
+        <remap from="mavros/battery"             to="/iris_2/mavros/battery" />
+        <remap from="mavros/setpoint_raw/attitude" to="/iris_2/mavros/setpoint_raw/attitude" />
+        <remap from="mavros/set_mode"            to="/iris_2/mavros/set_mode" />
+        <remap from="mavros/cmd/arming"          to="/iris_2/mavros/cmd/arming" />
+        <remap from="mavros/cmd/command"         to="/iris_2/mavros/cmd/command" />
+        <remap from="~odom"                      to="/iris_2/ground_truth/odom" />
+        <remap from="~cmd"                       to="/planning/pos_cmd_3" />
+        <remap from="~takeoff_land"              to="/iris_2/takeoff_land" />
+        <remap from="traj_start_trigger"         to="/iris_2/traj_start_trigger" />
+        <remap from="debugPx4ctrl"               to="/iris_2/debugPx4ctrl" />
+        <remap from="px4ctrl_mode"               to="/iris_2/px4ctrl_mode" />
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+    </node>
+    <node pkg="px4ctrl" type="increase_frequency.sh" name="iris_2_increase_frequency" output="screen">
+        <env name="DRONE_ID" value="2" />
+    </node>
+
+    <!-- iris_3 -->
+    <node pkg="px4ctrl" type="px4ctrl_node" name="iris_3_px4ctrl" output="screen">
+        <remap from="mavros/state"               to="/iris_3/mavros/state" />
+        <remap from="mavros/extended_state"      to="/iris_3/mavros/extended_state" />
+        <remap from="mavros/imu/data"            to="/iris_3/mavros/imu/data" />
+        <remap from="mavros/rc/in"               to="/iris_3/mavros/rc/in" />
+        <remap from="mavros/battery"             to="/iris_3/mavros/battery" />
+        <remap from="mavros/setpoint_raw/attitude" to="/iris_3/mavros/setpoint_raw/attitude" />
+        <remap from="mavros/set_mode"            to="/iris_3/mavros/set_mode" />
+        <remap from="mavros/cmd/arming"          to="/iris_3/mavros/cmd/arming" />
+        <remap from="mavros/cmd/command"         to="/iris_3/mavros/cmd/command" />
+        <remap from="~odom"                      to="/iris_3/ground_truth/odom" />
+        <remap from="~cmd"                       to="/planning/pos_cmd_4" />
+        <remap from="~takeoff_land"              to="/iris_3/takeoff_land" />
+        <remap from="traj_start_trigger"         to="/iris_3/traj_start_trigger" />
+        <remap from="debugPx4ctrl"               to="/iris_3/debugPx4ctrl" />
+        <remap from="px4ctrl_mode"               to="/iris_3/px4ctrl_mode" />
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+    </node>
+    <node pkg="px4ctrl" type="increase_frequency.sh" name="iris_3_increase_frequency" output="screen">
+        <env name="DRONE_ID" value="3" />
+    </node>
+</launch>

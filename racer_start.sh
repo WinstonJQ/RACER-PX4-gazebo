@@ -14,17 +14,15 @@ sleep 10  # 重要！PX4启动需要足够时间，可根据实际情况调整
 run_in_new_tab "位姿获取" "python3 ./src/px4_gazebo_racer/scripts/get_local_pose_new.py iris 4"
 sleep 2
 
-run_in_new_tab "控制器0" "rosrun cxr_egoctrl_v1 control_iris0"
+run_in_new_tab "GT Odom" "python3 ./src/px4_gazebo_racer/scripts/gazebo_odom_pub.py iris 4"
+sleep 1
+
+run_in_new_tab "px4ctrl" "roslaunch px4ctrl multi_px4ctrl.launch"
+sleep 3
+
+run_in_new_tab "解锁起飞" "python3 ./src/px4_gazebo_racer/scripts/unlock_multi.py"
 sleep 2
 
-run_in_new_tab "控制器1" "rosrun cxr_egoctrl_v1 control_iris1"
-sleep 2
-
-run_in_new_tab "控制器2" "rosrun cxr_egoctrl_v1 control_iris2"
-sleep 2
-
-run_in_new_tab "控制器3" "rosrun cxr_egoctrl_v1 control_iris3"
-sleep 2
 run_in_new_tab "探索" "roslaunch exploration_manager swarm_exploration.launch"
 
 echo "所有命令已启动！建议手动排列窗口位置以便观察。"

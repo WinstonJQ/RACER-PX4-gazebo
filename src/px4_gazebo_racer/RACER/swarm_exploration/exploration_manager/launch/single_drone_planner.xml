@@ -85,12 +85,12 @@
     <param name="sdf_map/box_max_x" value="4" type="double"/>
     <param name="sdf_map/box_max_y" value="7" type="double"/>
     <param name="sdf_map/box_max_z" value="2.0" type="double"/> -->
-    <param name="sdf_map/box_min_x" value="-10.5" type="double"/>
-    <param name="sdf_map/box_min_y" value="-10.5" type="double"/>
-    <param name="sdf_map/box_min_z" value="0" type="double"/> 
-    <param name="sdf_map/box_max_x" value="10.5" type="double"/>
-    <param name="sdf_map/box_max_y" value="10.5" type="double"/>
-    <param name="sdf_map/box_max_z" value="2" type="double"/>
+    <param name="sdf_map/box_min_x" value="-8.5" type="double"/>
+    <param name="sdf_map/box_min_y" value="-9.5" type="double"/>
+    <param name="sdf_map/box_min_z" value="0" type="double"/>
+    <param name="sdf_map/box_max_x" value="8.5" type="double"/>
+    <param name="sdf_map/box_max_y" value="9.5" type="double"/>
+    <param name="sdf_map/box_max_z" value="1.5" type="double"/>
     <param name="sdf_map/no_drone_1" value="false" type="bool"/>
 
     <param name="map_ros/cx" value="$(arg cx)"/>
@@ -200,7 +200,7 @@
     <param name="manager/min_time" value="true" type="bool"/>
     <param name="manager/relax_time1" value="0.3" type="double"/>
     <param name="manager/relax_time2" value="1.5" type="double"/>
-    <param name="manager/max_yawdot" value="$(eval 120 * 3.1415926 / 180.0)" type="double"/>
+    <param name="manager/max_yawdot" value="$(eval 90 * 3.1415926 / 180.0)" type="double"/>
 
   <!-- kinodynamic path searching -->
     <param name="search/max_tau" value="0.8" type="double"/>

@@ -74,6 +74,8 @@ add_message_files(
   Odometry.msg
   PolynomialTrajectory.msg
   LQRTrajectory.msg
+  TakeoffLand.msg
+  Px4ctrlDebug.msg
 )
 
 generate_messages(
